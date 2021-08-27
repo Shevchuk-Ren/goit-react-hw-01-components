@@ -1,5 +1,7 @@
 .profile {
-  width: 300px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: rgb(78, 29, 29);
   background-clip: border-box;
   border-radius: 0.25rem;
@@ -29,25 +31,24 @@
 li {
   display: flex;
   flex-direction: column;
-
-  background-color: cadetblue;
-  width: calc(100% / 3);
   text-align: center;
   padding: 10px;
+  background-color: cadetblue;
+  width: calc(100% / 3);
   border: 1px solid rgb(69, 66, 66);
   border-radius: 0.25rem;
 }
-li .label {
+.label {
   color: rgb(236, 240, 17);
 }
-li .quantity {
+.quantity {
   font-weight: bold;
 
   color: rgb(12, 12, 12);
 }
 
-p.name,
-p.tag,
-p.location {
+.name,
+.tag,
+.location {
   margin-bottom: 10px;
 }
