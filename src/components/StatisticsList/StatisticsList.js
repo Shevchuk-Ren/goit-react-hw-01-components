@@ -14,8 +14,17 @@ const StatisticsList = ({ stats }) => (
 );
 
 StatisticsList.propTypes = {
-  percentage: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      percentage: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
+// StatisticsList.propTypes = {
+//   percentage: PropTypes.number.isRequired,
+//   label: PropTypes.string.isRequired,
+//   id: PropTypes.string.isRequired,
+// };
 export default StatisticsList;
