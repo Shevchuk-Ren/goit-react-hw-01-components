@@ -27,6 +27,7 @@ FriendList.defaultProps = {
   isOnline: false,
 };
 FriendList.propTypes = {
+  title: PropTypes.string,
   friends: PropTypes.arrayOf(
     PropTypes.shape({
       avatar: PropTypes.string,
@@ -36,11 +37,5 @@ FriendList.propTypes = {
     }),
   ).isRequired,
 };
-// FriendList.propTypes = {
-//   avatar: PropTypes.string,
-//   name: PropTypes.string.isRequired,
-//   isOnline: PropTypes.oneOf([false, true]),
-//   id: PropTypes.string.isRequired,
-// };
 
 export default FriendList;
