@@ -1,5 +1,6 @@
 .statList {
   display: flex;
+  background-color: blueviolet;
 }
 .item {
 }

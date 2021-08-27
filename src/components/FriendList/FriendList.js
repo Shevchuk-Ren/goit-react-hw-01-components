@@ -6,7 +6,7 @@ const FriendList = ({ title, friends }) => (
   <div className={styles.wrapper}>
     {title && <h2 className={styles.title}>{title}</h2>}
 
-    <ul class={styles.friendList}>
+    <ul className={styles.friendList}>
       {friends.map(({ avatar, name, isOnline, id }) => (
         <li className={styles.item} key={id}>
           <span
@@ -26,12 +26,21 @@ const FriendList = ({ title, friends }) => (
 FriendList.defaultProps = {
   isOnline: false,
 };
-
 FriendList.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.oneOf([false, true]),
-  id: PropTypes.string.isRequired,
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.oneOf([false, true]),
+      id: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
 };
+// FriendList.propTypes = {
+//   avatar: PropTypes.string,
+//   name: PropTypes.string.isRequired,
+//   isOnline: PropTypes.oneOf([false, true]),
+//   id: PropTypes.string.isRequired,
+// };
 
 export default FriendList;

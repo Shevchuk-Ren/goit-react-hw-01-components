@@ -22,9 +22,5 @@ StatisticsList.propTypes = {
     }),
   ).isRequired,
 };
-// StatisticsList.propTypes = {
-//   percentage: PropTypes.number.isRequired,
-//   label: PropTypes.string.isRequired,
-//   id: PropTypes.string.isRequired,
-// };
+
 export default StatisticsList;
