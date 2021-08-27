@@ -4,19 +4,18 @@ import styles from './FriendList.module.css';
 
 const FriendList = ({ title, friends }) => (
   <div className={styles.wrapper}>
-    <h2 className={styles.title}>{title}</h2>
-    <ul class={styles.friendlist}>
+    {title && <h2 className={styles.title}>{title}</h2>}
+
+    <ul class={styles.friendList}>
       {friends.map(({ avatar, name, isOnline, id }) => (
         <li className={styles.item} key={id}>
-          {isOnline ? (
-            <span
-              className={styles.status}
-              style={{ backgroundColor: `rgb(0, 204, 0)` }}
-            ></span>
-          ) : (
-            <span className={styles.status}>{isOnline}</span>
-          )}
-          <img className={styles.avatar} src={avatar} alt="" width="48" />
+          <span
+            className={styles.status}
+            style={{
+              backgroundColor: isOnline ? `rgb(0, 204, 0)` : `rgb(230, 0, 0)`,
+            }}
+          ></span>
+          <img className={styles.avatar} src={avatar} alt={name} width="48" />
           <p className={styles.name}>{name}</p>
         </li>
       ))}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './StatisticsList.module.css';
 
 const StatisticsList = ({ stats }) => (
-  <ul className={styles.statlist}>
+  <ul className={styles.statList}>
     {stats.map(({ id, label, percentage }) => (
       <li className={styles.item} key={id}>
         <span className={styles.label}>{label}</span>
@@ -14,7 +14,7 @@ const StatisticsList = ({ stats }) => (
 );
 
 StatisticsList.propTypes = {
-  percentage: PropTypes.number.isRequired,
+  percentage: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };

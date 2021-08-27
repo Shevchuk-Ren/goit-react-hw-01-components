@@ -1,16 +1,17 @@
 import React from 'react';
-import 'modern-normalize/modern-normalize.css';
-import './index.css';
+import Container from './components/Container/Container';
 import Profile from './components/SocialProfile/SocialProfile';
 import Statistics from './components/Statistics/Statistics';
 import FriendList from './components/FriendList/FriendList';
+import TransactionHistory from './components/Transaction/TransactionHistory';
 import user from './user.json';
 import statisticalData from './statistical-data.json';
 import friends from './friends.json';
+import transactions from './transactions.json';
 
 const App = () => {
   return (
-    <div>
+    <Container>
       <Profile
         name={user.name}
         tag={user.tag}
@@ -21,9 +22,13 @@ const App = () => {
         likes={user.stats.likes}
       />
       <Statistics title="Upload stats" stats={statisticalData} />
-
       <FriendList title="Gluke's friends" friends={friends} />
-    </div>
+      <TransactionHistory
+        title="Gluke's transaction history"
+        items={transactions}
+      />
+      ;
+    </Container>
   );
 };
 

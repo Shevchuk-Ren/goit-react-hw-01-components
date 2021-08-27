@@ -12,7 +12,7 @@
   margin-bottom: 5px;
   color: rgb(86, 81, 86);
 }
-.friendlist {
+.friendList {
   display: flex;
   flex-wrap: wrap;
 }
@@ -27,7 +27,6 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: rgb(230, 0, 0);
 }
 .avatar {
   border-radius: 50%;
