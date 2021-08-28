@@ -1,28 +1,14 @@
 .statList {
   display: flex;
-  background-color: blueviolet;
+  background-color: var(--color-blueviolet);
 }
 .item {
 }
 .label {
-  color: rgb(236, 240, 17);
+  color: var(--color-yellow);
 }
 .percentage {
   font-weight: bold;
 
-  color: rgb(12, 12, 12);
-}
-
-.docx {
-  background-color: rgb(236, 240, 17);
-}
-.pdf {
-  background-color: rgb(236, 240, 17);
-}
-
-.psd {
-  background-color: rgb(236, 240, 17);
-}
-.pdf {
-  background-color: rgb(236, 240, 17);
+  color: var(--color-black);
 }

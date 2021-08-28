@@ -43,6 +43,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:root {
+  --color-blue: cadetblue;
+  --color-granat: rgb(78, 29, 29);
+  --color-green: rgb(0, 204, 0);
+  --color-grey: rgb(86, 81, 86);
+  --color-red: rgb(230, 0, 0);
+  --color-black: rgb(12, 12, 12);
+  --color-yellow: rgb(236, 240, 17);
+  --color-blueviolet: blueviolet;
+  --color-grey-border: rgb(69, 66, 66);
+}
+
 #root {
   padding: 20px;
 }

@@ -10,10 +10,7 @@ const FriendList = ({ title, friends }) => (
       {friends.map(({ avatar, name, isOnline, id }) => (
         <li className={styles.item} key={id}>
           <span
-            className={styles.status}
-            style={{
-              backgroundColor: isOnline ? `rgb(0, 204, 0)` : `rgb(230, 0, 0)`,
-            }}
+            className={isOnline ? `${styles.online}` : `${styles.offline}`}
           ></span>
           <img className={styles.avatar} src={avatar} alt={name} width="48" />
           <p className={styles.name}>{name}</p>
