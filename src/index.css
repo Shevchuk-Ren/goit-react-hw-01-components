@@ -43,7 +43,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-:root {
+/* :root {
   --color-blue: cadetblue;
   --color-granat: rgb(78, 29, 29);
   --color-green: rgb(0, 204, 0);
@@ -53,7 +53,7 @@ code {
   --color-yellow: rgb(236, 240, 17);
   --color-blueviolet: blueviolet;
   --color-grey-border: rgb(69, 66, 66);
-}
+} */
 
 #root {
   padding: 20px;

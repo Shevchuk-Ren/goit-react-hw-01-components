@@ -1,23 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './FriendList.module.css';
+// import styles from './FriendList.module.css';
+import {
+  FriendWrapper,
+  Title,
+  RosterFriends,
+  Item,
+  Status,
+  Avatar,
+  Name,
+} from './FriendList.styled';
 
 const FriendList = ({ title, friends }) => (
-  <div className={styles.wrapper}>
-    {title && <h2 className={styles.title}>{title}</h2>}
+  <FriendWrapper>
+    {title && <Title>{title}</Title>}
 
-    <ul className={styles.friendList}>
+    <RosterFriends>
       {friends.map(({ avatar, name, isOnline, id }) => (
-        <li className={styles.item} key={id}>
-          <span
-            className={isOnline ? `${styles.online}` : `${styles.offline}`}
-          ></span>
-          <img className={styles.avatar} src={avatar} alt={name} width="48" />
-          <p className={styles.name}>{name}</p>
-        </li>
+        <Item key={id}>
+          <Status isOnline={isOnline}></Status>
+          <Avatar src={avatar} alt={name} width="48" />
+          <Name>{name}</Name>
+        </Item>
       ))}
-    </ul>
-  </div>
+    </RosterFriends>
+  </FriendWrapper>
 );
 
 FriendList.defaultProps = {

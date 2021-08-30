@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import StatisticsList from '../StatisticsList/StatisticsList';
-import styles from './Statistics.module.css';
+import { StatisticSection, Wrapper, Title } from './Statistics.styled';
 
 const Statistics = ({ title, stats }) => (
-  <section className={styles.statistics}>
-    <div className={styles.wrapper}>
-      {title && <h2 className={styles.title}>{title}</h2>}
+  <StatisticSection>
+    <Wrapper>
+      {title && <Title>{title}</Title>}
       <StatisticsList stats={stats} />
-    </div>
-  </section>
+    </Wrapper>
+  </StatisticSection>
 );
 
 Statistics.propTypes = {

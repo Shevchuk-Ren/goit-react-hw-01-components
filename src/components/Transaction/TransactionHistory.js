@@ -1,37 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './TransactionHistory.module.css';
+// import styles from './TransactionHistory.module.css';
+import {
+  Wrapper,
+  Title,
+  Transaction,
+  Topic,
+  Tbody,
+  Item,
+  Cell,
+} from './TransactionHistory.styled';
 
 const TransactionHistory = ({ title, items }) => (
-  <div className={styles.wrapper}>
-    {title && <h2 className={styles.title}>{title}</h2>}
-    <table className={styles.transaction}>
+  <Wrapper>
+    {title && <Title>{title}</Title>}
+    <Transaction>
       <thead>
-        <tr className={styles.topics}>
-          <th className={styles.topic}>Type</th>
-          <th className={styles.topic}>Amount</th>
-          <th className={styles.topic}>Currency</th>
+        <tr className="topics">
+          <Topic>Type</Topic>
+          <Topic>Amount</Topic>
+          <Topic>Currency</Topic>
         </tr>
       </thead>
 
-      <tbody className={styles.tbody}>
+      <Tbody>
         {items.map(({ id, type, amount, currency }) => (
-          <tr className={styles.item} key={id}>
-            <td className={styles.cell} style={{ color: `rgb(235, 222, 222)` }}>
-              {' '}
-              {type}
-            </td>
-            <td className={styles.cell} style={{ color: `rgb(236, 240, 17)` }}>
-              {amount}
-            </td>
-            <td className={styles.cell} style={{ color: `rgb(235, 222, 222)` }}>
-              {currency}
-            </td>
-          </tr>
+          <Item key={id}>
+            <Cell style={{ color: `rgb(235, 222, 222)` }}> {type}</Cell>
+            <Cell style={{ color: `rgb(236, 240, 17)` }}>{amount}</Cell>
+            <Cell style={{ color: `rgb(235, 222, 222)` }}>{currency}</Cell>
+          </Item>
         ))}
-      </tbody>
-    </table>
-  </div>
+      </Tbody>
+    </Transaction>
+  </Wrapper>
 );
 TransactionHistory.propTypes = {
   title: PropTypes.string,
